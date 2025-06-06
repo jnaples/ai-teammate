@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
@@ -32,6 +33,7 @@ export default function RootLayout({
         className={`${montserrat.variable} ${inter.variable} min-h-screen antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
