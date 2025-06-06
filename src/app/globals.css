@@ -33,5 +33,9 @@ h5,
 h6 {
   font-family: var(--font-montserrat);
   color: white;
+}
+
+h1,
+h2 {
   letter-spacing: 1.5px;
 }

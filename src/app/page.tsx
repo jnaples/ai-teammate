@@ -1,12 +1,26 @@
 "use client";
 
 import toast, { Toaster } from "react-hot-toast";
+import useAiTeammatePromptGenerator from "@/src/lib/hooks/useAiTeammatePromptGenerator";
 
 export default function Home() {
+  // Use the custom hook to get the necessary states and handler function
+  const { generatedPrompt, handleSubmit } = useAiTeammatePromptGenerator();
+
   function copyPromptToClipboard() {
     const text = document.getElementById("optimizedOutput")?.textContent || "";
     navigator.clipboard.writeText(text);
-    toast.success("Copied to clipboard!");
+    toast.success("Copied to clipboard!", {
+      style: {
+        background: "#27272a",
+        color: "#fff",
+        fontFamily: "Inter",
+      },
+      iconTheme: {
+        primary: "#10b981", // Circle background (e.g., emerald-500)
+        secondary: "#fff", // Check icon color
+      },
+    });
   }
 
   return (
@@ -14,23 +28,27 @@ export default function Home() {
       <main>
         <section className="p-6">
           <div className="relative mx-auto max-w-screen-xl">
-            <div className="grid h-7 w-full grid-cols-1 items-baseline gap-10 md:grid-cols-5">
+            <div className="grid w-full grid-cols-1 items-baseline gap-10 md:grid-cols-5">
               <div className="col-span-3 rounded-2xl border border-zinc-800 bg-[#0C0C0C] p-6">
                 <div>
                   <h1 className="text-[var(--font-montserrat) mb-6 text-3xl font-bold text-white">
                     Build Your AI Teammate
                   </h1>
 
-                  <form id="aiTeammateForm" className="space-y-10">
+                  <form
+                    id="aiTeammateForm"
+                    className="space-y-10"
+                    onSubmit={handleSubmit}
+                  >
                     <div>
-                      <h2 className="mb-4 text-lg font-semibold text-gray-300">
+                      <h3 className="mb-4 text-lg font-semibold text-gray-300">
                         Step 1: Figure Out Your AI Teammate's Superpower (Role &
                         Goal)
-                      </h2>
+                      </h3>
                       <div className="mb-4">
                         <label
                           htmlFor="aiRole"
-                          className="block text-sm font-medium text-gray-300"
+                          className="block font-medium text-gray-300"
                         >
                           What's their job? (Clear Role)
                         </label>
@@ -45,7 +63,7 @@ export default function Home() {
                       <div>
                         <label
                           htmlFor="aiMission"
-                          className="block text-sm font-medium text-gray-300"
+                          className="block font-medium text-gray-300"
                         >
                           What's their main mission? (Problem they're solving)
                         </label>
@@ -60,32 +78,17 @@ export default function Home() {
                     </div>
 
                     <div>
-                      <h2 className="mb-4 text-lg font-semibold text-gray-300">
+                      <h3 className="mb-4 text-lg font-semibold text-gray-300">
                         Step 2: Introduce Your AI Teammate to the Team (Who
                         They're Helping)
-                      </h2>
-                      <div className="mb-4">
-                        <label
-                          htmlFor="humanTeammates"
-                          className="block text-sm font-medium text-gray-300"
-                        >
-                          Who are the real people? (Describe human teammates)
-                        </label>
-                        <textarea
-                          id="humanTeammates"
-                          name="humanTeammates"
-                          rows="3"
-                          className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                          placeholder="e.g., Max, the Marketing Manager, who needs catchy slogans."
-                        ></textarea>
-                      </div>
+                      </h3>
                       <div>
                         <label
                           htmlFor="humanHopesHeadaches"
-                          className="block text-sm font-medium text-gray-300"
+                          className="block font-medium text-gray-300"
                         >
-                          What are their hopes, dreams, and headaches? (What
-                          they want to achieve and problems they face)
+                          What do they need help with? (Describe their goals and
+                          biggest challenges the AI can help solve)
                         </label>
                         <textarea
                           id="humanHopesHeadaches"
@@ -98,14 +101,14 @@ export default function Home() {
                     </div>
 
                     <div>
-                      <h2 className="mb-4 text-lg font-semibold text-gray-300">
+                      <h3 className="mb-4 text-lg font-semibold text-gray-300">
                         Step 3: Give Your AI Teammate All the Context &
                         Background
-                      </h2>
+                      </h3>
                       <div className="mb-4">
                         <label
                           htmlFor="companyInfo"
-                          className="block text-sm font-medium text-gray-300"
+                          className="block font-medium text-gray-300"
                         >
                           Company info (DNSFilter: what we do, what makes us
                           special, rivals, etc.)
@@ -121,7 +124,7 @@ export default function Home() {
                       <div className="mb-4">
                         <label
                           htmlFor="productBlueprints"
-                          className="block text-sm font-medium text-gray-300"
+                          className="block font-medium text-gray-300"
                         >
                           Product Blueprints (Our products/features: policies,
                           reports, etc.)
@@ -137,7 +140,7 @@ export default function Home() {
                       <div>
                         <label
                           htmlFor="otherUsefulInfo"
-                          className="block text-sm font-medium text-gray-300"
+                          className="block font-medium text-gray-300"
                         >
                           Any other useful info (Specific terms, rules, brand
                           voice, examples of past successful ads, etc.)
@@ -153,13 +156,13 @@ export default function Home() {
                     </div>
 
                     <div>
-                      <h2 className="mb-4 text-lg font-semibold text-gray-300">
+                      <h3 className="mb-4 text-lg font-semibold text-gray-300">
                         Step 4: Set the Rules for Your AI Teammate (Constraints)
-                      </h2>
+                      </h3>
                       <div className="mb-4">
                         <label
                           htmlFor="communicationStyle"
-                          className="block text-sm font-medium text-gray-300"
+                          className="block font-medium text-gray-300"
                         >
                           How should they talk? (e.g., short sentences, no long
                           lists)
@@ -175,7 +178,7 @@ export default function Home() {
                       <div className="mb-4">
                         <label
                           htmlFor="unknownResponse"
-                          className="block text-sm font-medium text-gray-300"
+                          className="block font-medium text-gray-300"
                         >
                           What should they do if they don't know something?
                         </label>
@@ -187,28 +190,11 @@ export default function Home() {
                           placeholder="e.g., Say 'I don't know' or ask questions."
                         />
                       </div>
-                      <div className="mb-4">
-                        <label
-                          htmlFor="honesty"
-                          className="block text-sm font-medium text-gray-300"
-                        >
-                          Honesty
-                        </label>
-                        <select
-                          id="honesty"
-                          name="honesty"
-                          className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                        >
-                          <option value="true">Always be truthful</option>
-                          <option value="false">
-                            Not a strict requirement
-                          </option>
-                        </select>
-                      </div>
+
                       <div>
                         <label
                           htmlFor="workStyle"
-                          className="block text-sm font-medium text-gray-300"
+                          className="block font-medium text-gray-300"
                         >
                           What style should their work be in?
                         </label>
@@ -223,13 +209,13 @@ export default function Home() {
                     </div>
 
                     <div>
-                      <h2 className="mb-4 text-lg font-semibold text-gray-300">
+                      <h3 className="mb-4 text-lg font-semibold text-gray-300">
                         Step 5: Ask for What You Want (The Actual Prompt!)
-                      </h2>
+                      </h3>
                       <div className="mb-4">
                         <label
                           htmlFor="specificMission"
-                          className="block text-sm font-medium text-gray-300"
+                          className="block font-medium text-gray-300"
                         >
                           Be super clear: What's their specific mission for the
                           day?
@@ -245,7 +231,7 @@ export default function Home() {
                       <div className="mb-4">
                         <label
                           htmlFor="examples"
-                          className="block text-sm font-medium text-gray-300"
+                          className="block font-medium text-gray-300"
                         >
                           Give examples (if it helps)
                         </label>
@@ -260,7 +246,7 @@ export default function Home() {
                       <div className="mb-4">
                         <label
                           htmlFor="moreIdeas"
-                          className="block text-sm font-medium text-gray-300"
+                          className="block font-medium text-gray-300"
                         >
                           Don't be afraid to ask for more ideas!
                         </label>
@@ -275,7 +261,7 @@ export default function Home() {
                       <div>
                         <label
                           htmlFor="unclearHandling"
-                          className="block text-sm font-medium text-gray-300"
+                          className="block font-medium text-gray-300"
                         >
                           If unclear:
                         </label>
@@ -298,24 +284,35 @@ export default function Home() {
                   </form>
                 </div>
               </div>
-              <div className="sticky top-6 col-span-2 rounded-2xl border border-zinc-800 p-6">
+              <div className="top-6 col-span-3 block rounded-2xl border border-zinc-800 p-6 md:sticky md:col-span-2">
                 <h2 className="mb-6 text-3xl font-bold text-gray-800">
                   Optimized AI Prompt Output
                 </h2>
                 <div
                   id="optimizedOutput"
-                  className="rounded-md bg-zinc-900 p-6 font-mono text-sm whitespace-pre-wrap text-gray-200"
+                  className="rounded-md bg-zinc-900 p-6 font-mono whitespace-pre-wrap text-gray-200"
                 >
-                  Your optimized AI Teammate prompt will appear here after you
-                  fill out the form and click "Generate AI Teammate Prompt."
+                  {generatedPrompt ||
+                    'Your optimized AI Teammate prompt will appear here after you fill out the form and click "Generate AI Teammate Prompt.'}
                 </div>
-                <button
-                  id="copyPrompt"
-                  onClick={copyPromptToClipboard}
-                  className="mt-4 w-full cursor-pointer rounded-md bg-[#CE008E] px-4 py-2 font-bold text-white uppercase transition-all duration-300 ease-in-out hover:bg-[rgba(206,0,142,0.8)] focus:ring-2 focus:ring-[#CE008E] focus:ring-offset-2 focus:outline-none"
-                >
-                  Copy Prompt
-                </button>
+
+                <div className="group relative">
+                  <button
+                    disabled={!generatedPrompt}
+                    id="copyPrompt"
+                    onClick={copyPromptToClipboard}
+                    className="mt-4 w-full cursor-pointer rounded-md bg-[#CE008E] px-4 py-2 font-bold text-white uppercase transition-all duration-300 ease-in-out hover:bg-[rgba(206,0,142,0.8)] focus:ring-2 focus:ring-[#CE008E] focus:ring-offset-2 focus:outline-none disabled:cursor-not-allowed disabled:bg-[rgba(206,0,142,0.8)]"
+                  >
+                    Copy Prompt
+                  </button>
+
+                  {!generatedPrompt && (
+                    <div className="absolute -bottom-[50px] left-1/2 mb-2 hidden w-max -translate-x-1/2 rounded bg-zinc-700 px-2 py-1 text-white group-hover:block">
+                      Fill out the form and click "Generate AI Teammate Prompt"
+                      <div className="absolute bottom-full left-1/2 h-0 w-0 -translate-x-1/2 rotate-180 border-t-4 border-r-4 border-l-4 border-t-zinc-700 border-r-transparent border-l-transparent"></div>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>
