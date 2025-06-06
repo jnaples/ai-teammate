@@ -42,15 +42,15 @@ export default function Home() {
                   >
                     <div>
                       <h3 className="mb-4 text-lg font-semibold text-gray-300">
-                        Step 1: Figure Out Your AI Teammate's Superpower (Role &
-                        Goal)
+                        Step 1: Figure Out Your AI Teammate&apos;s Superpower
+                        (Role & Goal)
                       </h3>
                       <div className="mb-4">
                         <label
                           htmlFor="aiRole"
                           className="block font-medium text-gray-300"
                         >
-                          What's their job? (Clear Role)
+                          What&apos;s their job? (Clear Role)
                         </label>
                         <input
                           type="text"
@@ -65,12 +65,13 @@ export default function Home() {
                           htmlFor="aiMission"
                           className="block font-medium text-gray-300"
                         >
-                          What's their main mission? (Problem they're solving)
+                          What&apos;s their main mission? (Problem they&apos;re
+                          solving)
                         </label>
                         <textarea
                           id="aiMission"
                           name="aiMission"
-                          rows="3"
+                          rows={3}
                           className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                           placeholder="e.g., to generate fresh ad concepts quickly"
                         ></textarea>
@@ -80,7 +81,7 @@ export default function Home() {
                     <div>
                       <h3 className="mb-4 text-lg font-semibold text-gray-300">
                         Step 2: Introduce Your AI Teammate to the Team (Who
-                        They're Helping)
+                        They&apos;re Helping)
                       </h3>
                       <div>
                         <label
@@ -93,7 +94,7 @@ export default function Home() {
                         <textarea
                           id="humanHopesHeadaches"
                           name="humanHopesHeadaches"
-                          rows="3"
+                          rows={3}
                           className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                           placeholder="e.g., Sam wants more engaging social media posts, but she's always short on time."
                         ></textarea>
@@ -116,7 +117,7 @@ export default function Home() {
                         <textarea
                           id="companyInfo"
                           name="companyInfo"
-                          rows="4"
+                          rows={4}
                           className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                           placeholder="e.g., DNSFilter blocks bad websites! We just got Zorus!"
                         ></textarea>
@@ -132,7 +133,7 @@ export default function Home() {
                         <textarea
                           id="productBlueprints"
                           name="productBlueprints"
-                          rows="4"
+                          rows={4}
                           className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                           placeholder="e.g., Policies work by blocking categories, custom lists. Reports help people see what's happening (CyberSight, Insights, Query Log)."
                         ></textarea>
@@ -148,7 +149,7 @@ export default function Home() {
                         <textarea
                           id="otherUsefulInfo"
                           name="otherUsefulInfo"
-                          rows="4"
+                          rows={4}
                           className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                           placeholder="e.g., Our brand's voice is friendly, exciting."
                         ></textarea>
@@ -180,14 +181,14 @@ export default function Home() {
                           htmlFor="unknownResponse"
                           className="block font-medium text-gray-300"
                         >
-                          What should they do if they don't know something?
+                          What should they do if they don&apos;t know something?
                         </label>
                         <input
                           type="text"
                           id="unknownResponse"
                           name="unknownResponse"
                           className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                          placeholder="e.g., Say 'I don't know' or ask questions."
+                          placeholder="e.g., Say 'I don't know' or ask me questions."
                         />
                       </div>
 
@@ -217,13 +218,13 @@ export default function Home() {
                           htmlFor="specificMission"
                           className="block font-medium text-gray-300"
                         >
-                          Be super clear: What's their specific mission for the
-                          day?
+                          Be super clear: What&apos;s their specific mission for
+                          the day?
                         </label>
                         <textarea
                           id="specificMission"
                           name="specificMission"
-                          rows="3"
+                          rows={3}
                           className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                           placeholder="e.g., Generate 5 catchy headlines for a social media ad about our new roaming client feature."
                         ></textarea>
@@ -238,7 +239,7 @@ export default function Home() {
                         <textarea
                           id="examples"
                           name="examples"
-                          rows="3"
+                          rows={3}
                           className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                           placeholder="e.g., Example headlines: 'Protect Your Devices Anywhere!'"
                         ></textarea>
@@ -248,7 +249,7 @@ export default function Home() {
                           htmlFor="moreIdeas"
                           className="block font-medium text-gray-300"
                         >
-                          Don't be afraid to ask for more ideas!
+                          Don&apos;t be afraid to ask for more ideas!
                         </label>
                         <input
                           type="text"
@@ -293,7 +294,7 @@ export default function Home() {
                   className="rounded-md bg-zinc-900 p-6 font-mono whitespace-pre-wrap text-gray-200"
                 >
                   {generatedPrompt ||
-                    'Your optimized AI Teammate prompt will appear here after you fill out the form and click "Generate AI Teammate Prompt.'}
+                    "Your optimized AI Teammate prompt will appear here after you fill out the form and click 'Generate AI Teammate Prompt.'"}
                 </div>
 
                 <div className="group relative">
