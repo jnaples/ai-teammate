@@ -40,46 +40,48 @@ export default function Home() {
                     className="space-y-10"
                     onSubmit={handleSubmit}
                   >
-                    <div>
-                      <h3 className="mb-4 text-lg font-semibold text-gray-300">
+                    <div className="flex flex-col gap-3">
+                      <h3 className="text-lg font-semibold text-gray-300">
                         Step 1: Figure Out Your AI Teammate&apos;s Superpower
                         (Role & Goal)
                       </h3>
-                      <div className="mb-4">
-                        <label
-                          htmlFor="aiRole"
-                          className="block font-medium text-gray-300"
-                        >
-                          What&apos;s their job? (Clear Role)
-                        </label>
-                        <input
-                          type="text"
-                          id="aiRole"
-                          name="aiRole"
-                          className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                          placeholder="e.g., Social Media Content Creator"
-                        />
-                      </div>
-                      <div>
-                        <label
-                          htmlFor="aiMission"
-                          className="block font-medium text-gray-300"
-                        >
-                          What&apos;s their main mission? (Problem they&apos;re
-                          solving)
-                        </label>
-                        <textarea
-                          id="aiMission"
-                          name="aiMission"
-                          rows={3}
-                          className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                          placeholder="e.g., to generate fresh ad concepts quickly"
-                        ></textarea>
+                      <div className="flex flex-col gap-6">
+                        <div>
+                          <label
+                            htmlFor="aiRole"
+                            className="block font-medium text-gray-300"
+                          >
+                            What&apos;s their job? (Clear Role)
+                          </label>
+                          <input
+                            type="text"
+                            id="aiRole"
+                            name="aiRole"
+                            className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                            placeholder="e.g., Social Media Content Creator"
+                          />
+                        </div>
+                        <div>
+                          <label
+                            htmlFor="aiMission"
+                            className="block font-medium text-gray-300"
+                          >
+                            What&apos;s their main mission? (Problem
+                            they&apos;re solving)
+                          </label>
+                          <textarea
+                            id="aiMission"
+                            name="aiMission"
+                            rows={3}
+                            className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                            placeholder="e.g., to generate fresh ad concepts quickly"
+                          ></textarea>
+                        </div>
                       </div>
                     </div>
 
-                    <div>
-                      <h3 className="mb-4 text-lg font-semibold text-gray-300">
+                    <div className="flex flex-col gap-3">
+                      <h3 className="text-lg font-semibold text-gray-300">
                         Step 2: Introduce Your AI Teammate to the Team (Who
                         They&apos;re Helping)
                       </h3>
@@ -101,178 +103,184 @@ export default function Home() {
                       </div>
                     </div>
 
-                    <div>
-                      <h3 className="mb-4 text-lg font-semibold text-gray-300">
+                    <div className="flex flex-col gap-3">
+                      <h3 className="text-lg font-semibold text-gray-300">
                         Step 3: Give Your AI Teammate All the Context &
                         Background
                       </h3>
-                      <div className="mb-4">
-                        <label
-                          htmlFor="companyInfo"
-                          className="block font-medium text-gray-300"
-                        >
-                          Company info (DNSFilter: what we do, what makes us
-                          special, rivals, etc.)
-                        </label>
-                        <textarea
-                          id="companyInfo"
-                          name="companyInfo"
-                          rows={4}
-                          className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                          placeholder="e.g., DNSFilter blocks bad websites! We just got Zorus!"
-                        ></textarea>
-                      </div>
-                      <div className="mb-4">
-                        <label
-                          htmlFor="productBlueprints"
-                          className="block font-medium text-gray-300"
-                        >
-                          Product Blueprints (Our products/features: policies,
-                          reports, etc.)
-                        </label>
-                        <textarea
-                          id="productBlueprints"
-                          name="productBlueprints"
-                          rows={4}
-                          className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                          placeholder="e.g., Policies work by blocking categories, custom lists. Reports help people see what's happening (CyberSight, Insights, Query Log)."
-                        ></textarea>
-                      </div>
-                      <div>
-                        <label
-                          htmlFor="otherUsefulInfo"
-                          className="block font-medium text-gray-300"
-                        >
-                          Any other useful info (Specific terms, rules, brand
-                          voice, examples of past successful ads, etc.)
-                        </label>
-                        <textarea
-                          id="otherUsefulInfo"
-                          name="otherUsefulInfo"
-                          rows={4}
-                          className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                          placeholder="e.g., Our brand's voice is friendly, exciting."
-                        ></textarea>
+                      <div className="flex flex-col gap-6">
+                        <div>
+                          <label
+                            htmlFor="companyInfo"
+                            className="block font-medium text-gray-300"
+                          >
+                            Company info (DNSFilter: what we do, what makes us
+                            special, rivals, etc.)
+                          </label>
+                          <textarea
+                            id="companyInfo"
+                            name="companyInfo"
+                            rows={4}
+                            className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                            placeholder="e.g., DNSFilter blocks bad websites! We just got Zorus!"
+                          ></textarea>
+                        </div>
+                        <div>
+                          <label
+                            htmlFor="productBlueprints"
+                            className="block font-medium text-gray-300"
+                          >
+                            Product Blueprints (Our products/features: policies,
+                            reports, etc.)
+                          </label>
+                          <textarea
+                            id="productBlueprints"
+                            name="productBlueprints"
+                            rows={4}
+                            className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                            placeholder="e.g., Policies work by blocking categories, custom lists. Reports help people see what's happening (CyberSight, Insights, Query Log)."
+                          ></textarea>
+                        </div>
+                        <div>
+                          <label
+                            htmlFor="otherUsefulInfo"
+                            className="block font-medium text-gray-300"
+                          >
+                            Any other useful info (Specific terms, rules, brand
+                            voice, examples of past successful ads, etc.)
+                          </label>
+                          <textarea
+                            id="otherUsefulInfo"
+                            name="otherUsefulInfo"
+                            rows={4}
+                            className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                            placeholder="e.g., Our brand's voice is friendly, exciting."
+                          ></textarea>
+                        </div>
                       </div>
                     </div>
 
-                    <div>
-                      <h3 className="mb-4 text-lg font-semibold text-gray-300">
+                    <div className="flex flex-col gap-3">
+                      <h3 className="text-lg font-semibold text-gray-300">
                         Step 4: Set the Rules for Your AI Teammate (Constraints)
                       </h3>
-                      <div className="mb-4">
-                        <label
-                          htmlFor="communicationStyle"
-                          className="block font-medium text-gray-300"
-                        >
-                          How should they talk? (e.g., short sentences, no long
-                          lists)
-                        </label>
-                        <input
-                          type="text"
-                          id="communicationStyle"
-                          name="communicationStyle"
-                          className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                          placeholder="e.g., Always use short sentences."
-                        />
-                      </div>
-                      <div className="mb-4">
-                        <label
-                          htmlFor="unknownResponse"
-                          className="block font-medium text-gray-300"
-                        >
-                          What should they do if they don&apos;t know something?
-                        </label>
-                        <input
-                          type="text"
-                          id="unknownResponse"
-                          name="unknownResponse"
-                          className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                          placeholder="e.g., Say 'I don't know' or ask me questions."
-                        />
-                      </div>
-
-                      <div>
-                        <label
-                          htmlFor="workStyle"
-                          className="block font-medium text-gray-300"
-                        >
-                          What style should their work be in?
-                        </label>
-                        <input
-                          type="text"
-                          id="workStyle"
-                          name="workStyle"
-                          className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                          placeholder="e.g., Friendly, exciting tone."
-                        />
+                      <div className="flex flex-col gap-6">
+                        <div>
+                          <label
+                            htmlFor="communicationStyle"
+                            className="block font-medium text-gray-300"
+                          >
+                            How should they talk? (e.g., short sentences, no
+                            long lists)
+                          </label>
+                          <input
+                            type="text"
+                            id="communicationStyle"
+                            name="communicationStyle"
+                            className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                            placeholder="e.g., Always use short sentences."
+                          />
+                        </div>
+                        <div>
+                          <label
+                            htmlFor="unknownResponse"
+                            className="block font-medium text-gray-300"
+                          >
+                            What should they do if they don&apos;t know
+                            something?
+                          </label>
+                          <input
+                            type="text"
+                            id="unknownResponse"
+                            name="unknownResponse"
+                            className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                            placeholder="e.g., Say 'I don't know' or ask me questions."
+                          />
+                        </div>
+                        <div>
+                          <label
+                            htmlFor="workStyle"
+                            className="block font-medium text-gray-300"
+                          >
+                            What style should their work be in?
+                          </label>
+                          <input
+                            type="text"
+                            id="workStyle"
+                            name="workStyle"
+                            className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                            placeholder="e.g., Friendly, exciting tone."
+                          />
+                        </div>
                       </div>
                     </div>
 
-                    <div>
-                      <h3 className="mb-4 text-lg font-semibold text-gray-300">
+                    <div className="flex flex-col gap-3">
+                      <h3 className="text-lg font-semibold text-gray-300">
                         Step 5: Ask for What You Want (The Actual Prompt!)
                       </h3>
-                      <div className="mb-4">
-                        <label
-                          htmlFor="specificMission"
-                          className="block font-medium text-gray-300"
-                        >
-                          Be super clear: What&apos;s their specific mission for
-                          the day?
-                        </label>
-                        <textarea
-                          id="specificMission"
-                          name="specificMission"
-                          rows={3}
-                          className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                          placeholder="e.g., Generate 5 catchy headlines for a social media ad about our new roaming client feature."
-                        ></textarea>
-                      </div>
-                      <div className="mb-4">
-                        <label
-                          htmlFor="examples"
-                          className="block font-medium text-gray-300"
-                        >
-                          Give examples (if it helps)
-                        </label>
-                        <textarea
-                          id="examples"
-                          name="examples"
-                          rows={3}
-                          className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                          placeholder="e.g., Example headlines: 'Protect Your Devices Anywhere!'"
-                        ></textarea>
-                      </div>
-                      <div className="mb-4">
-                        <label
-                          htmlFor="moreIdeas"
-                          className="block font-medium text-gray-300"
-                        >
-                          Don&apos;t be afraid to ask for more ideas!
-                        </label>
-                        <input
-                          type="text"
-                          id="moreIdeas"
-                          name="moreIdeas"
-                          className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                          placeholder="e.g., 'What other ideas do you have for this?'"
-                        />
-                      </div>
-                      <div>
-                        <label
-                          htmlFor="unclearHandling"
-                          className="block font-medium text-gray-300"
-                        >
-                          If unclear:
-                        </label>
-                        <input
-                          type="text"
-                          id="unclearHandling"
-                          name="unclearHandling"
-                          className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                          placeholder="e.g., Ask the AI or tell it to ask you questions."
-                        />
+                      <div className="flex flex-col gap-6">
+                        <div>
+                          <label
+                            htmlFor="specificMission"
+                            className="block font-medium text-gray-300"
+                          >
+                            Be super clear: What&apos;s their specific mission
+                            for the day?
+                          </label>
+                          <textarea
+                            id="specificMission"
+                            name="specificMission"
+                            rows={3}
+                            className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                            placeholder="e.g., Generate 5 catchy headlines for a social media ad about our new roaming client feature."
+                          ></textarea>
+                        </div>
+                        <div>
+                          <label
+                            htmlFor="examples"
+                            className="block font-medium text-gray-300"
+                          >
+                            Give examples (if it helps)
+                          </label>
+                          <textarea
+                            id="examples"
+                            name="examples"
+                            rows={3}
+                            className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                            placeholder="e.g., Example headlines: 'Protect Your Devices Anywhere!'"
+                          ></textarea>
+                        </div>
+                        <div>
+                          <label
+                            htmlFor="moreIdeas"
+                            className="block font-medium text-gray-300"
+                          >
+                            Don&apos;t be afraid to ask for more ideas!
+                          </label>
+                          <input
+                            type="text"
+                            id="moreIdeas"
+                            name="moreIdeas"
+                            className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                            placeholder="e.g., 'What other ideas do you have for this?'"
+                          />
+                        </div>
+                        <div>
+                          <label
+                            htmlFor="unclearHandling"
+                            className="block font-medium text-gray-300"
+                          >
+                            If unclear:
+                          </label>
+                          <input
+                            type="text"
+                            id="unclearHandling"
+                            name="unclearHandling"
+                            className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                            placeholder="e.g., Ask the AI or tell it to ask you questions."
+                          />
+                        </div>
                       </div>
                     </div>
 
