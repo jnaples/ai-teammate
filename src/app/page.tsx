@@ -58,7 +58,7 @@ export default function Home() {
                               type="text"
                               id="aiRole"
                               name="aiRole"
-                              className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                              className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-[#3527fd] focus:ring-[#3527fd] focus-visible:ring-1 focus-visible:outline-none"
                               placeholder="e.g., Social Media Content Creator"
                             />
                           </div>
@@ -74,8 +74,8 @@ export default function Home() {
                               id="aiMission"
                               name="aiMission"
                               rows={3}
-                              className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                              placeholder="e.g., to generate fresh ad concepts quickly"
+                              className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-[#3527fd] focus:ring-[#3527fd] focus-visible:ring-1 focus-visible:outline-none"
+                              placeholder="e.g., To generate fresh ad concepts quickly"
                             ></textarea>
                           </div>
                         </div>
@@ -98,7 +98,7 @@ export default function Home() {
                             id="humanHopesHeadaches"
                             name="humanHopesHeadaches"
                             rows={3}
-                            className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                            className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-[#3527fd] focus:ring-[#3527fd] focus-visible:ring-1 focus-visible:outline-none"
                             placeholder="e.g., Sam wants more engaging social media posts, but she's always short on time."
                           ></textarea>
                         </div>
@@ -122,7 +122,7 @@ export default function Home() {
                               id="companyInfo"
                               name="companyInfo"
                               rows={4}
-                              className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                              className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-[#3527fd] focus:ring-[#3527fd] focus-visible:ring-1 focus-visible:outline-none"
                               placeholder="e.g., DNSFilter blocks bad websites! We just got Zorus!"
                             ></textarea>
                           </div>
@@ -138,7 +138,7 @@ export default function Home() {
                               id="productBlueprints"
                               name="productBlueprints"
                               rows={4}
-                              className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                              className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-[#3527fd] focus:ring-[#3527fd] focus-visible:ring-1 focus-visible:outline-none"
                               placeholder="e.g., Policies work by blocking categories, custom lists. Reports help people see what's happening (CyberSight, Insights, Query Log)."
                             ></textarea>
                           </div>
@@ -155,7 +155,7 @@ export default function Home() {
                               id="otherUsefulInfo"
                               name="otherUsefulInfo"
                               rows={4}
-                              className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                              className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-[#3527fd] focus:ring-[#3527fd] focus-visible:ring-1 focus-visible:outline-none"
                               placeholder="e.g., Our brand's voice is friendly, exciting."
                             ></textarea>
                           </div>
@@ -180,7 +180,7 @@ export default function Home() {
                               type="text"
                               id="communicationStyle"
                               name="communicationStyle"
-                              className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                              className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-[#3527fd] focus:ring-[#3527fd] focus-visible:ring-1 focus-visible:outline-none"
                               placeholder="e.g., Always use short sentences."
                             />
                           </div>
@@ -196,7 +196,7 @@ export default function Home() {
                               type="text"
                               id="unknownResponse"
                               name="unknownResponse"
-                              className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                              className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-[#3527fd] focus:ring-[#3527fd] focus-visible:ring-1 focus-visible:outline-none"
                               placeholder="e.g., Say 'I don't know' or ask me questions."
                             />
                           </div>
@@ -211,7 +211,7 @@ export default function Home() {
                               type="text"
                               id="workStyle"
                               name="workStyle"
-                              className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                              className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-[#3527fd] focus:ring-[#3527fd] focus-visible:ring-1 focus-visible:outline-none"
                               placeholder="e.g., Friendly, exciting tone."
                             />
                           </div>
@@ -235,7 +235,7 @@ export default function Home() {
                               id="specificMission"
                               name="specificMission"
                               rows={3}
-                              className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                              className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-[#3527fd] focus:ring-[#3527fd] focus-visible:ring-1 focus-visible:outline-none"
                               placeholder="e.g., Generate 5 catchy headlines for a social media ad about our new roaming client feature."
                             ></textarea>
                           </div>
@@ -250,7 +250,7 @@ export default function Home() {
                               id="examples"
                               name="examples"
                               rows={3}
-                              className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                              className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-[#3527fd] focus:ring-[#3527fd] focus-visible:ring-1 focus-visible:outline-none"
                               placeholder="e.g., Example headlines: 'Protect Your Devices Anywhere!'"
                             ></textarea>
                           </div>
@@ -265,7 +265,7 @@ export default function Home() {
                               type="text"
                               id="moreIdeas"
                               name="moreIdeas"
-                              className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                              className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-[#3527fd] focus:ring-[#3527fd] focus-visible:ring-1 focus-visible:outline-none"
                               placeholder="e.g., 'What other ideas do you have for this?'"
                             />
                           </div>
@@ -280,7 +280,7 @@ export default function Home() {
                               type="text"
                               id="unclearHandling"
                               name="unclearHandling"
-                              className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                              className="mt-2 block w-full rounded-md border border-zinc-600 p-2 shadow-sm focus:border-[#3527fd] focus:ring-[#3527fd] focus-visible:ring-1 focus-visible:outline-none"
                               placeholder="e.g., Ask the AI or tell it to ask you questions."
                             />
                           </div>
