@@ -289,7 +289,7 @@ export default function Home() {
 
                       <button
                         type="submit"
-                        className="w-full cursor-pointer rounded-md bg-[#3527fd] px-4 py-3 font-bold text-white uppercase transition-all duration-300 ease-in-out hover:bg-[rgb(53,39,253,0.5)] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
+                        className="focus:none w-full cursor-pointer rounded-md bg-[#3527fd] px-4 py-3 font-bold text-white uppercase transition-all duration-300 ease-in-out hover:bg-[rgb(53,39,253,0.5)] focus:ring-[#3527fd] focus:outline-none focus-visible:outline-none"
                       >
                         Generate AI Teammate Prompt
                       </button>
@@ -315,7 +315,7 @@ export default function Home() {
                       disabled={!generatedPrompt}
                       id="copyPrompt"
                       onClick={copyPromptToClipboard}
-                      className="mt-4 w-full cursor-pointer rounded-md bg-[#CE008E] px-4 py-2 font-bold text-white uppercase transition-all duration-300 ease-in-out hover:bg-[rgba(206,0,142,0.8)] focus:ring-2 focus:ring-[#CE008E] focus:ring-offset-2 focus:outline-none disabled:cursor-not-allowed disabled:bg-[rgba(206,0,142,0.8)]"
+                      className="mt-4 w-full cursor-pointer rounded-md bg-[#CE008E] px-4 py-3 font-bold text-white uppercase transition-all duration-300 ease-in-out hover:bg-[rgba(206,0,142,0.8)] focus:ring-0 focus:ring-offset-0 focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:outline-none disabled:cursor-not-allowed disabled:bg-[rgba(206,0,142,0.8)]"
                     >
                       Copy Prompt
                     </button>
