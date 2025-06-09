@@ -29,8 +29,9 @@ export default function Home() {
         <section className="p-6">
           <div className="relative mx-auto max-w-screen-xl">
             <div className="grid w-full grid-cols-1 items-baseline gap-10 md:grid-cols-5">
-              <div className="col-span-3 rounded-2xl bg-gradient-to-r from-zinc-900 via-zinc-500 to-zinc-900 p-px">
-                <div className="rounded-2xl bg-[#0C0C0C] p-6">
+              <div className="relative col-span-3 rounded-2xl border border-zinc-800 bg-[#0C0C0C] p-6">
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent opacity-70"></div>
+                <div className="">
                   <div>
                     <h1 className="text-[var(--font-montserrat) mb-6 text-3xl font-bold text-white">
                       Build Your AI Teammate
@@ -297,37 +298,36 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="top-6 col-span-3 block rounded-2xl bg-gradient-to-r from-zinc-900 via-zinc-500 to-zinc-900 p-px md:sticky md:col-span-2">
-                <div className="rounded-2xl bg-[#0C0C0C] p-6">
-                  <h2 className="mb-6 text-3xl font-bold text-gray-800">
-                    Optimized AI Prompt Output
-                  </h2>
-                  <div
-                    id="optimizedOutput"
-                    className="rounded-md bg-zinc-900 p-6 font-mono whitespace-pre-wrap text-gray-200"
+              <div className="top-6 col-span-3 block rounded-2xl border border-zinc-800 bg-[#0C0C0C] p-6 md:sticky md:col-span-2">
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent opacity-70"></div>
+
+                <h2 className="mb-6 text-3xl font-bold text-gray-800">
+                  Optimized AI Prompt Output
+                </h2>
+                <div
+                  id="optimizedOutput"
+                  className="rounded-md bg-zinc-900 p-6 font-mono whitespace-pre-wrap text-gray-200"
+                >
+                  {generatedPrompt ||
+                    "Your optimized AI Teammate prompt will appear here after you fill out the form and click 'Generate AI Teammate Prompt.'"}
+                </div>
+
+                <div className="group relative">
+                  <button
+                    disabled={!generatedPrompt}
+                    id="copyPrompt"
+                    onClick={copyPromptToClipboard}
+                    className="mt-4 w-full cursor-pointer rounded-md bg-[#CE008E] px-4 py-3 font-bold text-white uppercase transition-all duration-300 ease-in-out hover:bg-[rgba(206,0,142,0.8)] focus:ring-0 focus:ring-offset-0 focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:outline-none disabled:cursor-not-allowed disabled:bg-[rgba(206,0,142,0.8)]"
                   >
-                    {generatedPrompt ||
-                      "Your optimized AI Teammate prompt will appear here after you fill out the form and click 'Generate AI Teammate Prompt.'"}
-                  </div>
+                    Copy Prompt
+                  </button>
 
-                  <div className="group relative">
-                    <button
-                      disabled={!generatedPrompt}
-                      id="copyPrompt"
-                      onClick={copyPromptToClipboard}
-                      className="mt-4 w-full cursor-pointer rounded-md bg-[#CE008E] px-4 py-3 font-bold text-white uppercase transition-all duration-300 ease-in-out hover:bg-[rgba(206,0,142,0.8)] focus:ring-0 focus:ring-offset-0 focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:outline-none disabled:cursor-not-allowed disabled:bg-[rgba(206,0,142,0.8)]"
-                    >
-                      Copy Prompt
-                    </button>
-
-                    {!generatedPrompt && (
-                      <div className="absolute -bottom-[50px] left-1/2 mb-2 hidden w-max -translate-x-1/2 rounded bg-zinc-700 px-2 py-1 text-white group-hover:block">
-                        Fill out the form and click "Generate AI Teammate
-                        Prompt"
-                        <div className="absolute bottom-full left-1/2 h-0 w-0 -translate-x-1/2 rotate-180 border-t-4 border-r-4 border-l-4 border-t-zinc-700 border-r-transparent border-l-transparent"></div>
-                      </div>
-                    )}
-                  </div>
+                  {!generatedPrompt && (
+                    <div className="absolute -bottom-[50px] left-1/2 mb-2 hidden w-max -translate-x-1/2 rounded bg-zinc-700 px-2 py-1 text-white group-hover:block">
+                      Fill out the form and click "Generate AI Teammate Prompt"
+                      <div className="absolute bottom-full left-1/2 h-0 w-0 -translate-x-1/2 rotate-180 border-t-4 border-r-4 border-l-4 border-t-zinc-700 border-r-transparent border-l-transparent"></div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
