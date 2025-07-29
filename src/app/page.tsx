@@ -31,10 +31,7 @@ export default function Home() {
               </h1>
 
               <Link href="/ai-teammate">
-                <div
-                  data-text="Create AI Teammate"
-                  className="shine-button focus:none relative cursor-pointer overflow-hidden rounded-md px-4 py-3 font-bold text-white uppercase shadow-lg shadow-slate-900/55 transition-all duration-300 ease-in-out"
-                >
+                <div className="shine-button focus:none relative cursor-pointer overflow-hidden rounded-md px-4 py-3 font-bold text-white uppercase shadow-lg shadow-slate-900/55 transition-all duration-300 ease-in-out">
                   Create AI Teammate
                 </div>
               </Link>
@@ -59,7 +56,7 @@ export default function Home() {
         }
 
         .shine-button::after {
-          content: attr(data-text);
+          content: "Create AI Teammate";
           position: absolute;
           top: 2%;
           left: 1;
