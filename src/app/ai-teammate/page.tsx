@@ -948,16 +948,18 @@ export default function Home() {
 
   return (
     <>
-      <main className="min-h-screen w-full pt-6 pb-20">
-        <Image
-          src="/logo.svg"
-          width={220}
-          height={0}
-          alt="logo"
-          className="mx-auto mb-10"
-          style={{ height: "auto" }}
-          data-aos="fade-down"
-        />
+      <main className="relative min-h-screen w-full pb-20">
+        <div className="sticky top-0 z-10 mt-2 mb-10 w-full py-4 backdrop-blur-xl">
+          <Image
+            src="/logo.svg"
+            width={220}
+            height={0}
+            alt="logo"
+            className="mx-auto"
+            style={{ height: "auto" }}
+            data-aos="fade-down"
+          />
+        </div>
         <section className="p-6" data-aos="fade-down" data-aos-delay="200">
           <div className="relative mx-auto max-w-screen-xl">
             <div className="mx-auto w-full max-w-3xl space-y-10">
