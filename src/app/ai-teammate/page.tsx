@@ -7,6 +7,8 @@ import Image from "next/image";
 import { Copy } from "lucide-react";
 import Link from "next/link";
 
+import "aos/dist/aos.css";
+
 interface Teammate {
   id: number;
   role: string;
@@ -952,10 +954,11 @@ export default function Home() {
           width={220}
           height={0}
           alt="logo"
-          className="mx-auto"
+          className="mx-auto mb-10"
           style={{ height: "auto" }}
+          data-aos="fade-down"
         />
-        <section className="p-6">
+        <section className="p-6" data-aos="fade-down" data-aos-delay="200">
           <div className="relative mx-auto max-w-screen-xl">
             <div className="mx-auto w-full max-w-3xl space-y-10">
               <div className="relative col-span-3 rounded-2xl border border-zinc-800 bg-[#1C252E] p-6">
@@ -983,7 +986,10 @@ export default function Home() {
               </div>
 
               {formSubmitted && selectedTeammate && (
-                <div className="top-6 col-span-3 block rounded-2xl border border-zinc-800 bg-[#1C252E] p-6 md:sticky md:col-span-2">
+                <div
+                  className="top-6 col-span-3 block rounded-2xl border border-zinc-800 bg-[#1C252E] p-6 md:sticky md:col-span-2"
+                  data-aos="fade-down"
+                >
                   <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent opacity-70"></div>
                   <h2 className="text-var(--font-montserrat) mb-6 text-3xl font-bold text-white">
                     AI Teammate Setup Guide

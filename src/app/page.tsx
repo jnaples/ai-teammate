@@ -2,8 +2,19 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({
+      disable: "phone",
+      duration: 800,
+      easing: "ease-out-cubic",
+    });
+  });
+
   return (
     <>
       <main
@@ -17,12 +28,17 @@ export default function Home() {
           alt="logo"
           className="mx-auto"
           style={{ height: "auto" }}
+          data-aos="fade-down"
         />
 
         {/* Content vertically centered in remaining space */}
-        <div className="flex flex-grow items-center">
+        <div
+          className="flex flex-grow items-center"
+          data-aos="fade-down"
+          data-aos-delay="200"
+        >
           <div className="container mx-auto">
-            <div className="mx-auto flex max-w-fit flex-col items-center justify-center gap-8 rounded-2xl border-[.5px] border-slate-500/70 bg-slate-900/70 p-10 backdrop-blur-sm">
+            <div className="mx-auto flex max-w-fit flex-col items-center justify-center gap-8 rounded-2xl border-[.5px] border-slate-500/70 bg-slate-900/70 p-10">
               <h1 className="text-[var(--font-montserrat) max-w-3xl text-center text-5xl leading-tight font-bold text-white">
                 Supercharge your workday with{" "}
                 <span className="bg-gradient-to-r from-[#0FC2F4] via-[#3426FD] to-[#F204AE] bg-clip-text text-transparent">
