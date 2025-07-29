@@ -59,7 +59,7 @@ export default function Home() {
           content: "Create AI Teammate";
           position: absolute;
           top: 2%;
-          left: 1;
+          left: 0.5%;
           width: 99%;
           height: 96%;
           background-color: #3527fd;
