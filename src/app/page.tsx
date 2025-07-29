@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       <main
-        className="flex h-screen w-full flex-col justify-between bg-cover bg-top pt-6 pb-20"
+        className="flex h-screen w-full flex-col justify-between bg-cover bg-top px-6 pt-6 pb-20"
         style={{ backgroundImage: "url('/robot-bg.webp')" }}
       >
         <Image
