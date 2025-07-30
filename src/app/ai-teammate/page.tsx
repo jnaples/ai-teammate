@@ -1027,8 +1027,8 @@ export default function Home() {
                     </li>
                     <li className="mb-4">
                       <p className="mb-4">
-                        Copy the optimized instructions below and paste them
-                        into the "Instructions" text box.
+                        Copy the instructions in the box below and paste them
+                        into the "Instructions" text box in Gemini.
                       </p>
                       <div className="relative rounded-md bg-[#29323D] p-6 font-mono text-gray-200">
                         {/* Copy button stays fixed in top-right of the overall box */}
@@ -1056,7 +1056,16 @@ export default function Home() {
                       </div>
                     </li>
                     <li className="mb-4">
-                      <p className="mb-1">Add files from Google Drive:</p>
+                      <p className="mb-1">
+                        Add files from{" "}
+                        <Link
+                          href="https://drive.google.com/drive/folders/1-HUODycl3rT2FBCVSjIf-4AZiRCleao9?usp=drive_link"
+                          target="_blank"
+                          className="font-bold underline transition-all duration-300 ease-in hover:text-[#3527fd]"
+                        >
+                          Google Drive:
+                        </Link>{" "}
+                      </p>
                       <ol className="list-disc space-y-2 pl-8">
                         <li>
                           <p>
@@ -1065,7 +1074,49 @@ export default function Home() {
                           </p>
                         </li>
                         <li>
-                          <p>Select your files, then click “Insert”</p>
+                          <p className="mb-2">
+                            Select the following files from the Google Drive
+                            link above or by{" "}
+                            <Link
+                              href="https://drive.google.com/drive/folders/1-HUODycl3rT2FBCVSjIf-4AZiRCleao9?usp=drive_link"
+                              target="_blank"
+                              className="font-bold underline transition-all duration-300 ease-in hover:text-[#3527fd]"
+                            >
+                              clicking here
+                            </Link>
+                          </p>
+                          <ol className="list-disc space-y-2 pl-12">
+                            <li>
+                              <Link
+                                href="https://docs.google.com/document/d/1_h76jZvqaSN9mk4-Dh62u5P2hqJKc43eUVfHubm-6rE/edit?usp=drive_link"
+                                target="_blank"
+                                className="font-bold underline transition-all duration-300 ease-in hover:text-[#3527fd]"
+                              >
+                                2025 Messaging Guide v1.3
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href="https://docs.google.com/document/d/1Vxcoiqs2G4PzyH0UK0uWTVI0Tvx9ivW-QxCQVvjQ-Vs/edit?usp=drive_link"
+                                target="_blank"
+                                className="font-bold underline transition-all duration-300 ease-in hover:text-[#3527fd]"
+                              >
+                                Company and Product
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                href="https://docs.google.com/document/d/1Y-xXjf3jExj1RL6CY0vA4WxSJtWnVbqkfYIm_22roTQ/edit?usp=drive_link"
+                                target="_blank"
+                                className="font-bold underline transition-all duration-300 ease-in hover:text-[#3527fd]"
+                              >
+                                User Personas (optional)
+                              </Link>
+                            </li>
+                          </ol>
+                        </li>
+                        <li>
+                          <p>After files are adding, click “Insert”</p>
                         </li>
                       </ol>
                     </li>
