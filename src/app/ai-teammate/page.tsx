@@ -1200,7 +1200,7 @@ export default function Home() {
                     the #gemini-success-stories slack for help
                   </p>
                   <Link
-                    href="https://gemini.google.com/gems/create"
+                    href="https://www.loom.com/share/69dadbd770c244adb990f1783fe770bd?sid=fc9fcaf7-21fe-4d31-9d67-0e825d60f220"
                     target="_blank"
                     className="font-bold underline transition-all duration-300 ease-in hover:text-[#3527fd]"
                   >
