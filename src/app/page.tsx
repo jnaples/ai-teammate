@@ -39,7 +39,7 @@ export default function Home() {
         >
           <div className="container mx-auto">
             <div className="mx-auto flex max-w-fit flex-col items-center justify-center gap-6 rounded-3xl border-[.5px] border-slate-500/70 bg-slate-900/80 p-10 shadow-2xl shadow-slate-900/60">
-              <h1 className="text-[var(--font-montserrat) max-w-3xl text-center text-5xl leading-tight font-bold text-white">
+              <h1 className="text-[var(--font-montserrat) max-w-3xl text-center text-4xl leading-tight font-bold text-white md:text-5xl">
                 Supercharge your workday with{" "}
                 <span className="bg-gradient-to-r from-[#0FC2F4] via-[#3426FD] to-[#F204AE] bg-clip-text text-transparent">
                   AI Teammates

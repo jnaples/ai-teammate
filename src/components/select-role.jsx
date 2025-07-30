@@ -18,14 +18,15 @@ const teammates = [
   { id: 4, role: "Leadership & Executive" },
   { id: 5, role: "Legal" },
   { id: 6, role: "Marketing" },
-  { id: 7, role: "Operations & Strategy" },
-  { id: 8, role: "People & Talent (HR)" },
-  { id: 9, role: "Product Management & Design" },
-  { id: 10, role: "Quality Assurance (QA)" },
-  { id: 11, role: "Sales & Business Development" },
-  { id: 12, role: "Sales Engineering" },
-  { id: 13, role: "Security & Compliance" },
-  { id: 14, role: "UI/UX" },
+  { id: 7, role: "Management Coach" },
+  { id: 8, role: "Operations & Strategy" },
+  { id: 9, role: "People & Talent (HR)" },
+  { id: 10, role: "Product Management & Design" },
+  { id: 11, role: "Quality Assurance (QA)" },
+  { id: 12, role: "Sales & Business Development" },
+  { id: 13, role: "Sales Engineering" },
+  { id: 14, role: "Security & Compliance" },
+  { id: 15, role: "UI/UX" },
 ];
 
 export default function SelectAITeammate({ selected, setSelected }) {
