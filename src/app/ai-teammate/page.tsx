@@ -2,12 +2,13 @@
 
 import toast, { Toaster } from "react-hot-toast";
 import SelectAITeammate from "@/src/components/select-role";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Copy } from "lucide-react";
 import Link from "next/link";
 
 import "aos/dist/aos.css";
+import AOS from "aos";
 
 interface Teammate {
   id: number;
@@ -897,6 +898,13 @@ Step 7: Prepare for concept generation: Restate the concepts that were chosen al
 ];
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-out-cubic",
+    });
+  });
+
   const [selectedTeammate, setSelectedTeammate] = useState<Teammate | null>(
     null,
   );
