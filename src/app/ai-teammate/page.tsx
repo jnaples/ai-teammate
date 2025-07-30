@@ -948,8 +948,11 @@ export default function Home() {
 
   return (
     <>
-      <main className="relative min-h-screen w-full pb-20">
-        <div className="sticky top-0 z-10 mt-2 mb-10 w-full py-4 backdrop-blur-xl">
+      <main
+        className="relative min-h-screen w-full bg-cover bg-top pb-20"
+        style={{ backgroundImage: "url('/rock-bg.webp')" }}
+      >
+        <div className="mt-2 mb-10 w-full py-4">
           <Image
             src="/logo.svg"
             width={220}
