@@ -966,7 +966,7 @@ export default function Home() {
         <section className="p-6" data-aos="fade-down" data-aos-delay="200">
           <div className="relative mx-auto max-w-screen-xl">
             <div className="mx-auto w-full max-w-3xl space-y-10">
-              <div className="relative col-span-3 rounded-2xl border border-zinc-800 bg-[#1C252E] p-6">
+              <div className="relative col-span-3 rounded-2xl border border-zinc-800 bg-[#1C252E] p-6 shadow-2xl shadow-slate-900/60">
                 <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent opacity-70"></div>
                 <div className="">
                   <div>
@@ -992,7 +992,7 @@ export default function Home() {
 
               {formSubmitted && selectedTeammate && (
                 <div
-                  className="top-6 col-span-3 block rounded-2xl border border-zinc-800 bg-[#1C252E] p-6 md:sticky md:col-span-2"
+                  className="top-6 col-span-3 block rounded-2xl border border-zinc-800 bg-[#1C252E] p-6 md:sticky md:col-span-2 shadow-2xl shadow-slate-900/60"
                   data-aos="fade-down"
                 >
                   <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white to-transparent opacity-70"></div>
