@@ -999,7 +999,7 @@ export default function Home() {
                   <h2 className="text-var(--font-montserrat) mb-6 text-3xl font-bold text-white">
                     AI Teammate Setup Guide
                   </h2>
-                  <p className="mb-2 block text-lg font-semibold text-white">
+                  <p className="mb-2 block text-lg font-semibold text-[#ededed]">
                     Follow these quick steps to set up your AI Teammate in
                     Gemini!
                   </p>
@@ -1076,7 +1076,7 @@ export default function Home() {
                       </p>
                     </li>
                   </ol>
-                  <p className="mb-2 block text-lg font-semibold text-white">
+                  <p className="mb-2 block text-lg font-semibold text-[#ededed]">
                     Stuck or need help?
                   </p>
                   <p className="mb-4">

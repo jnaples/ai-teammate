@@ -31,13 +31,13 @@ const teammates = [
 export default function SelectAITeammate({ selected, setSelected }) {
   return (
     <Listbox value={selected} onChange={setSelected}>
-      <Label className="block text-lg font-semibold text-gray-300">
+      <Label className="block text-lg font-semibold text-[#ededed]">
         Step 1: Select Your AI Teammate's Role
       </Label>
       <div className="relative mt-2">
-        <ListboxButton className="focus:outline-[#3527fd]sm:text-sm/6 grid w-full cursor-default grid-cols-1 rounded-md bg-gray-50 py-1.5 pr-2 pl-3 text-left text-gray-900 outline -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2">
+        <ListboxButton className="focus:outline-[#3527fd]sm:text-sm/6 grid w-full cursor-default grid-cols-1 rounded-md bg-gray-50 py-2 pr-2 pl-3 text-left text-gray-900 outline -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2">
           <span
-            className={`col-start-1 row-start-1 truncate pr-6 ${selected ? "text-gray-900" : "text-gray-400"}`}
+            className={`col-start-1 row-start-1 truncate pr-6 ${selected ? "text-gray-900" : "text-base text-gray-500"}`}
           >
             {/* Conditionally display placeholder or selected role */}
             {selected ? selected.role : "Select AI Teammate"}
@@ -58,7 +58,7 @@ export default function SelectAITeammate({ selected, setSelected }) {
               value={teammate}
               className="group relative cursor-default py-2 pr-9 pl-3 text-gray-900 select-none data-[focus]:bg-[#3527fd] data-[focus]:text-white data-[focus]:outline-none"
             >
-              <span className="block truncate font-normal group-data-[selected]:font-semibold">
+              <span className="block truncate text-base group-data-[selected]:font-semibold">
                 {teammate.role}
               </span>
 
