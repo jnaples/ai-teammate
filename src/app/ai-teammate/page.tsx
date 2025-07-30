@@ -9,6 +9,7 @@ import Link from "next/link";
 
 import "aos/dist/aos.css";
 import AOS from "aos";
+import Head from "next/head";
 
 interface Teammate {
   id: number;
@@ -1013,6 +1014,10 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <meta name="theme-color" content="#3426FD" />
+      </Head>
+
       <main
         className="relative min-h-screen w-full bg-cover bg-top pb-20"
         style={{ backgroundImage: "url('/rock-bg.webp')" }}

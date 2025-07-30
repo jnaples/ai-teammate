@@ -5,6 +5,7 @@ import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import Head from "next/head";
 
 export default function Home() {
   useEffect(() => {
@@ -17,6 +18,10 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <meta name="theme-color" content="#3426FD" />
+      </Head>
+
       <main
         className="flex h-screen w-full flex-col justify-between bg-cover bg-top px-6 pt-6 pb-20"
         style={{ backgroundImage: "url('/robot-bg.webp')" }}
